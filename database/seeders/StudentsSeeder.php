@@ -5,24 +5,21 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
-class StudentsSeeder extends Seeder
+class StudentSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
-        DB::table('majors')->insert([
+        DB::table('students')->insert([
             [
-                'name' => 'S1 Teknik Informatika',
-                'code' => '00001',
-                'description' => 'lorem ipsum dolor sit amet consectetur adipiscing elit',
-            ],
-            [
-                'name' => 'S1 Sistem Informasi',
-                'code' => '00002',
-                'description' => 'lorem ipsum dolor sit amet consectetur adipiscing elit',
+                'name' => 'Teguh Praditya',
+                'student_id_number' => 'F55123046',
+                'email' => 'teguh@gmail.com',
+                'phone_number' => '6282259105873',
+                'birth_date' => '2005-8-01',
+                'gender' => 'Male',
+                'status' => 'Active',
+                'major_id' => 1,
             ],
         ]);
     }
